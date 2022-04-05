@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet, TouchableOpacity, Share} from 'react-native'
+import { View, Text, Image, StyleSheet, TouchableOpacity, Share, RefreshControl} from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { ms } from 'react-native-size-matters';
@@ -37,10 +37,24 @@ export default function DetailBook({navigation}) {
     } catch (error) {
       alert(error.message);
     }
-    
   }
+
+
+  const [refreshing, setRefreshing] = useState(false);
+  const onRefresh = () =>{
+    setRefreshing(true);
+    setTimeout(() => {
+      setRefreshing(false)
+      
+    }, 2000);
+  }
+
   return (
-    <ScrollView style={{backgroundColor: tema === 'light' ? '#a7cbad' : 'black'}}>
+    <ScrollView 
+    refreshControl={
+      <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+    }
+    style={{backgroundColor: tema === 'light' ? '#a7cbad' : 'black'}}>
       <View style={{flexDirection: 'row', justifyContent:'space-between', margin:ms(10)}}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Ionicons color='#fff' name='chevron-back-outline' size={ms(30)} />
