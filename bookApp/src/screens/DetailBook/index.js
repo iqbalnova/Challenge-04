@@ -43,14 +43,14 @@ export default function DetailBook({navigation}) {
     <ScrollView style={{backgroundColor: tema === 'light' ? '#a7cbad' : 'black'}}>
       <View style={{flexDirection: 'row', justifyContent:'space-between', margin:ms(10)}}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-          <Ionicons name='chevron-back-outline' size={ms(30)} />
+          <Ionicons color='#fff' name='chevron-back-outline' size={ms(30)} />
         </TouchableOpacity>
         <View style={{flexDirection: 'row'}}>
           <TouchableOpacity onPress={loveFeatured} >
-            <Ionicons name='ios-heart-sharp' size={ms(30)} />
+            <Ionicons name='ios-heart-sharp' size={ms(30)}  color="red"/>
           </TouchableOpacity>
           <TouchableOpacity onPress={onShare}>
-            <Ionicons name='ios-share-social' size={ms(30)} />
+            <Ionicons name='ios-share-social' size={ms(30)}  color="#fff"/>
           </TouchableOpacity>
         </View>
       </View>

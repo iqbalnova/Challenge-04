@@ -11,14 +11,14 @@ axios.defaults.headers.Authorization = `Bearer ${token}`;
 
 // get movie recomen
 
-export const getDataMovieRecomen = () => async dispatch => {
+export const getDataMovie = () => async dispatch => {
     try {
       dispatch(setLoading(true));
       const res = await axios.get(`${BASE_URL}/books`);
       console.log(res);
   
       if (res.status === 200) {
-        return dispatch(setDataMovieRecomen(res.data.results));
+        return dispatch(setDataMoviePopular(res.data.results));
       }
     } catch (error) {
       console.log(error);
@@ -35,22 +35,22 @@ export const getDataMovieRecomen = () => async dispatch => {
     };
   };
 
-  // get movie popular
-  export const getDataMoviePopular = () => async dispatch => {
-    try {
-      dispatch(setLoading(true));
-      const res = await axios.get(`${BASE_URL}/books?_sort=average_rating&_order=DESC`);
-      console.log(res);
+  // // get movie popular
+  // export const getDataMoviePopular = () => async dispatch => {
+  //   try {
+  //     dispatch(setLoading(true));
+  //     const res = await axios.get(`${BASE_URL}/books?_sort=average_rating&_order=DESC`);
+  //     console.log(res);
   
-      if (res.status === 200) {
-        return dispatch(setDataMovieRecomen(res.data.results));
-      }
-    } catch (error) {
-      console.log(error);
-    } finally {
-      dispatch(setLoading(false));
-    }
-  };
+  //     if (res.status === 200) {
+  //       return dispatch(setDataMovieRecomen(res.data.results));
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   } finally {
+  //     dispatch(setLoading(false));
+  //   }
+  // };
   
   export const setDataMoviePopular = payload => {
     return {

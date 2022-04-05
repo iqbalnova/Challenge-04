@@ -1,7 +1,7 @@
 import { FlatList, View, Text, Image, RefreshControl, TouchableOpacity, ActivityIndicator } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { getDataMovieRecomen, getDetailMovie, setRefreshing } from './redux/action';
+import { getDataMovie, getDetailMovie, setRefreshing } from './redux/action';
 import { ms } from 'react-native-size-matters';
 import Poppins from '../../components/Poppins';
 import { Rating } from 'react-native-ratings';
@@ -15,14 +15,15 @@ export default function Home() {
   const {token, name} = useSelector(state => state.login );
   const {loading, tema} = useSelector(state => state.global );
   const dispatch = useDispatch();
-  const {movieDataRecomen = [], movieDataPopular = []} = useSelector(state => state.home);
+  const { movieDataPopular = []} = useSelector(state => state.home);
 
   useEffect(() => {
-    getDataMovieRecom()
-  }, [token])
+    getDataMovies()
+    sortingRecom()
+  }, [])
 
-  const getDataMovieRecom = () => {
-    dispatch(getDataMovieRecomen()); // dispatch untuk fetching
+  const getDataMovies = () => {
+    dispatch(getDataMovie()); // dispatch untuk fetching
   };
 
   const getMovieByID = item => {
@@ -41,7 +42,7 @@ export default function Home() {
           backgroundColor: tema === 'light' ? '#fff' : '#282e2e'}}>
           <Image
             source={{uri: `${item.cover_image}`}}
-            resizeMode="cover"
+            resizeMode="contain"
             style={{height: ms(120), width: ms(120), marginHorizontal: ms(5)}}
           />
           <View style={{padding:ms(10), alignContent: 'space-around'}}>
@@ -90,6 +91,14 @@ export default function Home() {
   //     </TouchableOpacity>
   //   );
   // };
+  
+
+  const sortingRecom = () =>{
+    const sort = movieDataPopular.sort(function (a,b){
+      return b.average_rating - a.average_rating;
+    });
+    return sort.slice(0, 6);
+  }
 
 
   const Header = () =>{
@@ -104,7 +113,7 @@ export default function Home() {
         </View>
         
         <FlatList
-          data={movieDataRecomen}
+          data={sortingRecom(movieDataPopular)}
           keyExtractor={item => item.id}
           renderItem={CardMovieRecomen}
           horizontal
@@ -122,7 +131,7 @@ export default function Home() {
 
   const onRefresh = () => {
     setRefresh(true);
-    getDataMovieRecom();
+    getDataMovies();
     setRefresh(false);
   };
   
@@ -142,7 +151,7 @@ export default function Home() {
           }
           showsVerticalScrollIndicator={false}
           style={{backgroundColor: tema === 'light' ? '#a7cbad' : 'black'}}
-          data={movieDataRecomen}
+          data={movieDataPopular}
           keyExtractor={(item, index) => index}
           ListHeaderComponent={Header}
           renderItem={({item}) => (
