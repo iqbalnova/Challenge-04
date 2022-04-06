@@ -1,10 +1,10 @@
-import { View, Text, Image, StyleSheet, TouchableOpacity, Share, RefreshControl} from 'react-native'
+import { View, Text, Image, StyleSheet, TouchableOpacity, Share, RefreshControl, ScrollView} from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { ms } from 'react-native-size-matters';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { Rating } from 'react-native-ratings';
-import { ScrollView } from 'react-native-gesture-handler';
+// import {  } from 'react-native-gesture-handler';
 import NumberFormat from 'react-number-format';
 // import { Share } from 'react-native-share';
 import { notifikasi } from '../../components/Notifikasi';
