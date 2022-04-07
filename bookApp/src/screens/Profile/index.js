@@ -15,7 +15,7 @@ export default function Profile({navigation}) {
   const [mode, setMode] = useState('Dark');
 
   const logout = () =>{
-    dispatch(setToken(''));
+    dispatch(setToken());
     navigation.navigate('Login');
   }
 

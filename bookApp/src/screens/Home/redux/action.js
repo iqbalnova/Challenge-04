@@ -3,6 +3,7 @@ import { BASE_URL } from "../../../helpers/API";
 import { navigate } from "../../../helpers/navigate";
 import { setLoading } from "../../../redux/globalAction";
 import {store} from '../../../redux/store'
+import { setToken } from "../../Login/redux/action";
 
 
 const token = store.getState().login.token;
@@ -20,8 +21,13 @@ export const getDataMovie = () => async dispatch => {
       if (res.status === 200) {
         return dispatch(setDataMoviePopular(res.data.results));
       }
+      if (res.status === 401){
+       setToken();
+        navigate('Login')
+      }
     } catch (error) {
       console.log(error);
+      return dispatch(setToken(''));
     } finally {
       dispatch(setLoading(false));
       console.log('ini token',token)
@@ -35,23 +41,6 @@ export const getDataMovie = () => async dispatch => {
     };
   };
 
-  // // get movie popular
-  // export const getDataMoviePopular = () => async dispatch => {
-  //   try {
-  //     dispatch(setLoading(true));
-  //     const res = await axios.get(`${BASE_URL}/books?_sort=average_rating&_order=DESC`);
-  //     console.log(res);
-  
-  //     if (res.status === 200) {
-  //       return dispatch(setDataMovieRecomen(res.data.results));
-  //     }
-  //   } catch (error) {
-  //     console.log(error);
-  //   } finally {
-  //     dispatch(setLoading(false));
-  //   }
-  // };
-  
   export const setDataMoviePopular = payload => {
     return {
       type: 'SET_DATA_MOVIE_POPULAR',

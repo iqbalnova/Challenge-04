@@ -61,7 +61,7 @@ export default function DetailBook({navigation}) {
         </TouchableOpacity>
         <View style={{flexDirection: 'row'}}>
           <TouchableOpacity onPress={loveFeatured} >
-            <Ionicons name='ios-heart-sharp' size={ms(30)}  color="red"/>
+            <Ionicons name='ios-heart-sharp' size={ms(30)}  color="grey"/>
           </TouchableOpacity>
           <TouchableOpacity onPress={onShare}>
             <Ionicons name='ios-share-social' size={ms(30)}  color="#fff"/>

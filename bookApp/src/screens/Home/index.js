@@ -73,24 +73,6 @@ export default function Home() {
     );
   };
 
-  // const CardMoviePopular = ({item}) => {
-  //   return (
-  //     <TouchableOpacity onPress={() => getMovieByID(item)}>
-  //       <View style={{width: ms(130),height:ms(220), margin: ms(5) , borderRadius: ms(5), elevation:5, backgroundColor:'#fff'}}>
-  //         <Image
-  //           source={{uri: `${item.cover_image}`}}
-  //           resizeMode="contain"
-  //           style={{height: ms(150), width: ms(120), marginHorizontal: ms(5)}}
-  //         />
-  //         <View style={{padding:ms(10),}}>
-  //           <Poppins>{item.title}</Poppins>
-  //         </View>
-          
-  //       </View>
-        
-  //     </TouchableOpacity>
-  //   );
-  // };
   
 
   const sortingRecom = () =>{
