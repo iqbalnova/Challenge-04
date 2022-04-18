@@ -1,1 +1,1 @@
-export const BASE_URL = 'http://code.aldipee.com/api/v1'
+export const BASE_URL = 'http://code.aldipee.com/api/v1';

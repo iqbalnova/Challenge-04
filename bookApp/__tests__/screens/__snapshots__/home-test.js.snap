@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Group Name Home renders correctly 1`] = `
+<RCTScrollView
+  ListHeaderComponent={[Function]}
+  data={Array []}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  keyExtractor={[Function]}
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  onMomentumScrollBegin={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  refreshControl={
+    <RefreshControlMock
+      onRefresh={[Function]}
+      refreshing={false}
+    />
+  }
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  showsVerticalScrollIndicator={false}
+  stickyHeaderIndices={Array []}
+  style={
+    Object {
+      "backgroundColor": "#a7cbad",
+    }
+  }
+  viewabilityConfigCallbackPairs={Array []}
+>
+  <RCTRefreshControl />
+  <View>
+    <View
+      onLayout={[Function]}
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "margin": 15.714285714285714,
+              "marginTop": 15.714285714285714,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "black",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16,
+              }
+            }
+          >
+            Good Evening, 
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "black",
+                "fontFamily": "Poppins-Bold",
+                "fontSize": 17,
+              }
+            }
+          >
+            
+            !
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "marginHorizontal": 15.714285714285714,
+              "marginTop": 15.714285714285714,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "black",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16,
+              }
+            }
+          >
+            Recommended
+          </Text>
+        </View>
+        <RCTScrollView
+          data={Array []}
+          getItem={[Function]}
+          getItemCount={[Function]}
+          horizontal={true}
+          keyExtractor={[Function]}
+          onContentSizeChange={[Function]}
+          onLayout={[Function]}
+          onMomentumScrollBegin={[Function]}
+          onMomentumScrollEnd={[Function]}
+          onScroll={[Function]}
+          onScrollBeginDrag={[Function]}
+          onScrollEndDrag={[Function]}
+          removeClippedSubviews={false}
+          renderItem={[Function]}
+          scrollEventThrottle={50}
+          showsHorizontalScrollIndicator={false}
+          stickyHeaderIndices={Array []}
+          viewabilityConfigCallbackPairs={Array []}
+        >
+          <View />
+        </RCTScrollView>
+        <View
+          style={
+            Object {
+              "marginHorizontal": 15.714285714285714,
+              "marginTop": 15.714285714285714,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "black",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16,
+              }
+            }
+          >
+            Popular
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
