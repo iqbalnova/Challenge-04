@@ -1,15 +1,13 @@
 import {
   FlatList,
   View,
-  Text,
   Image,
   RefreshControl,
   TouchableOpacity,
-  ActivityIndicator,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {getDataMovie, getDetailMovie, setRefreshing} from './redux/action';
+import {getDataMovie, getDetailMovie} from './redux/action';
 import {ms} from 'react-native-size-matters';
 import Poppins from '../../components/Poppins';
 import {Rating} from 'react-native-ratings';
@@ -17,7 +15,7 @@ import LottieView from 'lottie-react-native';
 import NumberFormat from 'react-number-format';
 
 export default function Home() {
-  const {token, name} = useSelector(state => state.login);
+  const {name} = useSelector(state => state.login);
   const {loading, tema} = useSelector(state => state.global);
   const dispatch = useDispatch();
   const {movieDataPopular = []} = useSelector(state => state.home);
@@ -25,6 +23,7 @@ export default function Home() {
   useEffect(() => {
     getDataMovies();
     sortingRecom();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getDataMovies = () => {

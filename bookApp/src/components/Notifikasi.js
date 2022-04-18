@@ -1,3 +1,4 @@
+import {Platform} from 'react-native';
 import PushNotification from 'react-native-push-notification';
 
 class Notifikasi {
@@ -15,7 +16,7 @@ class Notifikasi {
         // process the notification
 
         // (required) Called when a remote is received or opened, or local notification is opened
-        notification.finish(PushNotificationIOS.FetchResult.NoData);
+        // notification.finish(PushNotificationIOS.FetchResult.NoData);
       },
 
       // (optional) Called when Registered Action is pressed and invokeApp is false, if true onNotification will be called (Android)
@@ -49,7 +50,7 @@ class Notifikasi {
        * - if you are not using remote notification or do not have Firebase installed, use this:
        *
        */
-      requestPermissions: true,
+      // requestPermissions: true,
       requestPermissions: Platform.OS === 'ios',
     });
   };

@@ -40,7 +40,8 @@ export default function Profile({navigation}) {
         <View style={{marginBottom: ms(10)}}>
           <Image
             style={{width: ms(300), height: ms(150), resizeMode: 'contain'}}
-            source={avatar}></Image>
+            source={avatar}
+          />
         </View>
         <Poppins size={ms(20)}>{name.toUpperCase()}</Poppins>
       </View>

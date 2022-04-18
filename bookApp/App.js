@@ -1,12 +1,12 @@
-import { LogBox } from 'react-native'
-import React, { useEffect } from 'react'
+import {LogBox} from 'react-native';
+import React, {useEffect} from 'react';
 import SplashScreen from 'react-native-splash-screen';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 
 import Root from './src/routes/Root';
 
-import { PersistGate } from 'redux-persist/integration/react';
-import {persistor, store} from './src/redux/store'
+import {PersistGate} from 'redux-persist/integration/react';
+import {persistor, store} from './src/redux/store';
 // Ignore log notification by message
 LogBox.ignoreLogs(['Warning: ...']);
 
@@ -23,5 +23,5 @@ export default function App() {
         <Root />
       </PersistGate>
     </Provider>
-  )
+  );
 }

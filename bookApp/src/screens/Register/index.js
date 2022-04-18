@@ -28,7 +28,9 @@ export default function Register({navigation}) {
   const dispatch = useDispatch();
   const {loading} = useSelector(state => state.global);
 
-  const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const regexEmail =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
   const regexPassword = /^[a-z0-9]\w{8,14}$/;
 
   const postRegister = async () => {
@@ -40,9 +42,12 @@ export default function Register({navigation}) {
       Alert.alert('Warning', 'Password harus diisi!');
     } else {
       if (!email.match(regexEmail)) {
-        alert('Email tidak valid');
+        Alert.alert('Error', 'Email tidak valid');
       } else if (!password.match(regexPassword)) {
-        alert('Password tidak valid. Minimal 8 karakter dan 1 angka');
+        Alert.alert(
+          'Error',
+          'Password tidak valid. Minimal 8 karakter dan 1 angka',
+        );
       } else {
         try {
           dispatch(setLoading(true));

@@ -30,7 +30,8 @@ export default function Login({navigation}) {
   const {token} = useSelector(state => state.login);
   const {loading} = useSelector(state => state.global);
 
-  const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const regexEmail =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   const postLogins = async () => {
     if (email.length === 0) {
@@ -38,7 +39,7 @@ export default function Login({navigation}) {
     } else if (password.length === 0) {
       Alert.alert('Warning', 'Password harus diisi!');
     } else if (!email.match(regexEmail)) {
-      alert('Email tidak valid');
+      Alert.alert('Error', 'Email tidak valid');
     } else {
       try {
         dispatch(setLoading(true));
@@ -80,6 +81,7 @@ export default function Login({navigation}) {
     if (token) {
       navigation.navigate('Main');
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token]);
 
   return (

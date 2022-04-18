@@ -8,7 +8,7 @@ import {
   RefreshControl,
   ScrollView,
 } from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 import {ms} from 'react-native-size-matters';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -47,7 +47,7 @@ export default function DetailBook({navigation}) {
         // dismissed
       }
     } catch (error) {
-      alert(error.message);
+      console.log(error);
     }
   };
 
