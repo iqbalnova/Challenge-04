@@ -1,0 +1,566 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Group Name Register renders correctly 1`] = `
+<RCTScrollView
+  refreshControl={
+    <RefreshControlMock
+      onRefresh={[Function]}
+      refreshing={false}
+    />
+  }
+  style={
+    Object {
+      "backgroundColor": "#a7cbad",
+      "flex": 1,
+    }
+  }
+>
+  <RCTRefreshControl />
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "marginHorizontal": 31.428571428571427,
+          "marginTop": 78.57142857142857,
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/assets/img/backdropRegis.jpg",
+          }
+        }
+        style={
+          Object {
+            "height": 314.2857142857143,
+            "resizeMode": "cover",
+            "width": 518.5714285714286,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "marginHorizontal": 31.428571428571427,
+          "marginTop": 47.14285714285714,
+        }
+      }
+    >
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "white",
+              "overflow": "hidden",
+              "paddingTop": 16,
+            },
+            undefined,
+            Object {
+              "height": 73.14285714285714,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": "#f95a25",
+                "fontSize": 31.428571428571427,
+              },
+              Object {
+                "bottom": 24,
+                "color": "rgba(163, 163, 163, 1)",
+                "left": 25.142857142857142,
+                "position": "absolute",
+              },
+              Object {
+                "fontFamily": "Feather",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#f0f0f0",
+                "position": "absolute",
+                "top": 8,
+                "width": 1,
+              },
+              Object {
+                "height": 48,
+                "left": 70.85714285714286,
+              },
+            ]
+          }
+        />
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "height": 48,
+              "left": 88,
+              "position": "absolute",
+              "top": 24,
+            }
+          }
+        >
+          <Text
+            collapsable={false}
+            style={
+              Object {
+                "color": "rgba(105, 105, 105, 1)",
+                "fontSize": 16,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Full Name
+          </Text>
+        </View>
+        <TextInput
+          animationDuration={300}
+          height={48}
+          iconClass={[Function]}
+          iconColor="#f95a25"
+          iconName="user"
+          iconSize={31.428571428571427}
+          iconWidth={62.857142857142854}
+          inputPadding={25.142857142857142}
+          label="Full Name"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangeText={[Function]}
+          onFocus={[Function]}
+          passiveIconColor="#a3a3a3"
+          style={
+            Array [
+              Object {
+                "color": "black",
+                "flex": 1,
+                "fontSize": 18,
+                "padding": 7,
+                "paddingLeft": 0,
+              },
+              Object {
+                "color": "#f95a25",
+                "marginLeft": 88,
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginHorizontal": 31.428571428571427,
+          "marginTop": 15.714285714285714,
+        }
+      }
+    >
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "white",
+              "overflow": "hidden",
+              "paddingTop": 16,
+            },
+            undefined,
+            Object {
+              "height": 73.14285714285714,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": "#f95a25",
+                "fontSize": 31.428571428571427,
+              },
+              Object {
+                "bottom": 24,
+                "color": "rgba(163, 163, 163, 1)",
+                "left": 25.142857142857142,
+                "position": "absolute",
+              },
+              Object {
+                "fontFamily": "Ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#f0f0f0",
+                "position": "absolute",
+                "top": 8,
+                "width": 1,
+              },
+              Object {
+                "height": 48,
+                "left": 70.85714285714286,
+              },
+            ]
+          }
+        />
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "height": 48,
+              "left": 88,
+              "position": "absolute",
+              "top": 24,
+            }
+          }
+        >
+          <Text
+            collapsable={false}
+            style={
+              Object {
+                "color": "rgba(105, 105, 105, 1)",
+                "fontSize": 16,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            E-mail
+          </Text>
+        </View>
+        <TextInput
+          animationDuration={300}
+          height={48}
+          iconClass={[Function]}
+          iconColor="#f95a25"
+          iconName="mail-outline"
+          iconSize={31.428571428571427}
+          iconWidth={62.857142857142854}
+          inputPadding={25.142857142857142}
+          label="E-mail"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangeText={[Function]}
+          onFocus={[Function]}
+          passiveIconColor="#a3a3a3"
+          style={
+            Array [
+              Object {
+                "color": "black",
+                "flex": 1,
+                "fontSize": 18,
+                "padding": 7,
+                "paddingLeft": 0,
+              },
+              Object {
+                "color": "#f95a25",
+                "marginLeft": 88,
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginHorizontal": 31.428571428571427,
+          "marginTop": 15.714285714285714,
+        }
+      }
+    >
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "white",
+              "overflow": "hidden",
+              "paddingTop": 16,
+            },
+            undefined,
+            Object {
+              "height": 73.14285714285714,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": "#f95a25",
+                "fontSize": 31.428571428571427,
+              },
+              Object {
+                "bottom": 24,
+                "color": "rgba(163, 163, 163, 1)",
+                "left": 25.142857142857142,
+                "position": "absolute",
+              },
+              Object {
+                "fontFamily": "Ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#f0f0f0",
+                "position": "absolute",
+                "top": 8,
+                "width": 1,
+              },
+              Object {
+                "height": 48,
+                "left": 70.85714285714286,
+              },
+            ]
+          }
+        />
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "height": 48,
+              "left": 88,
+              "position": "absolute",
+              "top": 24,
+            }
+          }
+        >
+          <Text
+            collapsable={false}
+            style={
+              Object {
+                "color": "rgba(105, 105, 105, 1)",
+                "fontSize": 16,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Password
+          </Text>
+        </View>
+        <TextInput
+          animationDuration={300}
+          height={48}
+          iconClass={[Function]}
+          iconColor="#f95a25"
+          iconName="lock-closed-outline"
+          iconSize={31.428571428571427}
+          iconWidth={62.857142857142854}
+          inputPadding={25.142857142857142}
+          label="Password"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onChangeText={[Function]}
+          onFocus={[Function]}
+          passiveIconColor="#a3a3a3"
+          secureTextEntry={true}
+          style={
+            Array [
+              Object {
+                "color": "black",
+                "flex": 1,
+                "fontSize": 18,
+                "padding": 7,
+                "paddingLeft": 0,
+              },
+              Object {
+                "color": "#f95a25",
+                "marginLeft": 88,
+              },
+              undefined,
+            ]
+          }
+          underlineColorAndroid="transparent"
+        />
+      </View>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#659cff",
+          "borderRadius": 7.857142857142857,
+          "marginHorizontal": 31.428571428571427,
+          "marginTop": 15.714285714285714,
+          "opacity": 1,
+          "paddingVertical": 23.57142857142857,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontSize": 25.142857142857142,
+            "textAlign": "center",
+          }
+        }
+      >
+        Register
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "marginBottom": 7.857142857142857,
+          "marginTop": 15.714285714285714,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 22,
+          }
+        }
+      >
+        Already have an account?
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "blue",
+            "fontSize": 25.142857142857142,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      >
+        Login
+      </Text>
+    </View>
+  </View>
+</RCTScrollView>
+`;

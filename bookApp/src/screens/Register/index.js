@@ -6,9 +6,10 @@ import {
   Alert,
   RefreshControl,
   ActivityIndicator,
+  ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 import React, {useState} from 'react';
-import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import {backdropRegis} from '../../assets/img';
 import {ms} from 'react-native-size-matters';
 import {Fumi} from 'react-native-textinput-effects';
@@ -59,7 +60,7 @@ export default function Register({navigation}) {
           const res = await axios.post(`${BASE_URL}/auth/register`, body, {
             validateStatus: status => status < 501,
           });
-          console.log(res);
+          // console.log(res);
 
           if (res.status <= 201) {
             navigation.navigate('Success');
