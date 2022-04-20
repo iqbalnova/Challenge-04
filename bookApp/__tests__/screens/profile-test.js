@@ -7,9 +7,10 @@ import ContainerTesting from '../../src/helpers/ReduxTesting';
 // test('snapshot', () => {
 //   expect(tree).toMatchSnapshot();
 // });
-jest.runAllTimers();
+// jest.mock('react-native-image-crop-picker', () => ({}));
+jest.mock('react-native-image-crop-picker', () => {});
 describe('Group Name', () => {
-  describe('Home', () => {
+  describe('Profile', () => {
     it('renders correctly', () => {
       const tree = create(ContainerTesting(<Profile />));
       expect(tree).toMatchSnapshot();
