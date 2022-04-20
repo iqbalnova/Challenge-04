@@ -6,9 +6,10 @@ import {
   Alert,
   ActivityIndicator,
   RefreshControl,
+  ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
-import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import {backdropLogin} from '../../assets/img';
 import {ms} from 'react-native-size-matters';
 import {Fumi} from 'react-native-textinput-effects';
