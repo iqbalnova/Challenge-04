@@ -6,6 +6,7 @@ import Poppins from '../../components/Poppins';
 import {useDispatch, useSelector} from 'react-redux';
 import {setToken} from '../Login/redux/action';
 import {setTheme} from '../../redux/globalAction';
+import ImagePicker from 'react-native-image-crop-picker';
 
 export default function Profile({navigation}) {
   const {name} = useSelector(state => state.login);
@@ -13,6 +14,10 @@ export default function Profile({navigation}) {
 
   const dispatch = useDispatch();
   const [mode, setMode] = useState('Dark');
+
+  const [photo, setPhoto] = useState(
+    'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png',
+  );
 
   const logout = () => {
     dispatch(setToken());
@@ -29,6 +34,16 @@ export default function Profile({navigation}) {
     }
   };
 
+  const chooseAvatar = () => {
+    ImagePicker.openPicker({
+      width: 300,
+      height: 400,
+      cropping: true,
+    }).then(image => {
+      setPhoto(image.path);
+    });
+  };
+
   return (
     <View flex={1}>
       <View
@@ -37,12 +52,29 @@ export default function Profile({navigation}) {
           backgroundColor: tema === 'light' ? '#a7cbad' : 'black', // #694fad
           paddingVertical: ms(10),
         }}>
-        <View style={{marginBottom: ms(10)}}>
+        <View
+          style={{
+            marginBottom: ms(10),
+            height: ms(120),
+            width: ms(120),
+            borderRadius: ms(60),
+          }}>
           <Image
-            style={{width: ms(300), height: ms(150), resizeMode: 'contain'}}
-            source={avatar}
+            style={{height: ms(120), width: ms(120), borderRadius: ms(60)}}
+            source={{uri: photo}}
           />
         </View>
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#5198e4',
+            paddingHorizontal: ms(20),
+            paddingVertical: ms(5),
+            borderRadius: ms(15),
+            marginBottom: ms(10),
+          }}
+          onPress={chooseAvatar}>
+          <Text style={{color: 'white'}}>Change Avatar</Text>
+        </TouchableOpacity>
         <Poppins size={ms(20)}>{name.toUpperCase()}</Poppins>
       </View>
       <View
