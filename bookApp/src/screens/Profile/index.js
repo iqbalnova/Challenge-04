@@ -6,7 +6,7 @@ import Poppins from '../../components/Poppins';
 import {useDispatch, useSelector} from 'react-redux';
 import {setToken} from '../Login/redux/action';
 import {setTheme} from '../../redux/globalAction';
-import ImagePicker from 'react-native-image-crop-picker';
+import ImageCropPicker from 'react-native-image-crop-picker';
 
 export default function Profile({navigation}) {
   const {name} = useSelector(state => state.login);
@@ -35,7 +35,7 @@ export default function Profile({navigation}) {
   };
 
   const chooseAvatar = () => {
-    ImagePicker.openPicker({
+    ImageCropPicker.openPicker({
       width: 300,
       height: 400,
       cropping: true,
